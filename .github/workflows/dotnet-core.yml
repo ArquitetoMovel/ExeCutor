@@ -26,6 +26,4 @@ jobs:
     - name: Generate Package
       run: dotnet pack --configuration Release
     - name: Pub Package
-      env:
-        nupkg_api: ${{ secrets.NUGET_API }}
-      run: dotnet nuget push "/home/runner/work/ExeCutor/ExeCutor/ExeCutor/bin/Release/ExeCutor.1.0.1-alpha1.nupkg" -k %nupkg_api% -s https://api.nuget.org/v3/index.json --skip-duplicate
+      run: dotnet nuget push "/home/runner/work/ExeCutor/ExeCutor/ExeCutor/bin/Release/ExeCutor.1.0.1-alpha1.nupkg" -k "${{ secrets.NUGET_API }}" -s https://api.nuget.org/v3/index.json --skip-duplicate
