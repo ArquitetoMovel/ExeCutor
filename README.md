@@ -1,17 +1,18 @@
-**The ExeCutor** is a little package that help developers to implements
-CQRS pattern in yours projects.
+# ExeCutor
+---
+A simple component that implements _CQRS pattern_ in .NET.
 
-ExeCutor uses mediator component to create handlers for commands and
+ExeCutor uses [mediatoR](https://github.com/jbogard/MediatR) component to create handlers for commands and
 events.
 
 The main goal is bringing an abstraction with Standardized Interfaces to
 implements commands and integration events as well.
 
-The package is built in .NET Standard to enable your utilization in .NET
-FRAMEWORK and .NET CORE.
+The package is built in **.NET STANDARD 2.0** to enable your utilization in **.NET
+FRAMEWORK** and **.NET CORE**.
 
-Get Started
------------
+### Get Started
+
 
 1.  Create a simple Command
 
@@ -46,7 +47,8 @@ Get Started
                 _repository = new RepositoryPostgres();
             }
     
-            public override Task<CommandResponse> HandleExecution(RemoveImageCommand command, CancellationToken cancellationToken) =>
+            public override Task<CommandResponse> HandleExecution(RemoveImageCommand command, 
+                                                                  CancellationToken cancellationToken) =>
             Task.Run<CommandResponse>(() =>
             {
                 return new CommandResponse
@@ -66,7 +68,7 @@ register all Handlers of your application.
 The mediator also requires a container to register your interfaces.
 
 If you already use a container IOC in your project, just use it, but if
-not use I have a sample how to register with AutoFac component.
+not use I have a sample how to register with [AutoFac](https://github.com/autofac/Autofac) component.
 
 #### Bellow we have a helper using AutoFac to register all Handler and your respective dependencies.
 ``` 
@@ -132,5 +134,5 @@ executor instance to send a command or publish an event.
     await executorInstance.Send(new RemoveImageCommand { Id = 1 });
 ```
 
-
+> The complete sample solution is [here](https://github.com/ArquitetoMovel/CQRSImageDetails).
 ### 
