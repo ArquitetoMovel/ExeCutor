@@ -4,8 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Alexandre A. Danelon</Authors>
     <PackageId>ExeCutor</PackageId>
-    <Version>1.0.1-alpha0</Version>
+    <Version>1.0.1-alpha1</Version>
+    <RepositoryUrl>https://github.com/ArquitetoMovel/ExeCutor.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
+  
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="8.0.1" />
