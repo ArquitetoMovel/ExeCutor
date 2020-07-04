@@ -1,5 +1,5 @@
 # ExeCutor
----
+
 A simple component that implements _CQRS pattern_ in .NET.
 
 ExeCutor uses [mediatoR](https://github.com/jbogard/MediatR) component to create handlers for commands and
