@@ -26,4 +26,4 @@ jobs:
     - name: Generate Package
       run: dotnet pack
     - name: Pub Package
-      run: dotnet nuget push /home/runner/work/ExeCutor/ExeCutor/ExeCutor/bin/Debug/ExeCutor.1.0.1.nupkg -k oy2lzcui3ja2dqqupyqajyrxehwjos7udkw5c35z7hed3y -s https://api.nuget.org/v3/index.json --skip-duplicate
+      run: dotnet nuget push /home/runner/work/ExeCutor/ExeCutor/ExeCutor/bin/Debug/ExeCutor.1.0.1-alpha0.nupkg -k oy2nblughbrdrgowmjyadtc4rpwcwuoubf3j4lqjtdcife -s https://api.nuget.org/v3/index.json --skip-duplicate

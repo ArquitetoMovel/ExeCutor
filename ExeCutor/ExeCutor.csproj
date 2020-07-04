@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Alexandre A. Danelon</Authors>
     <PackageId>ExeCutor</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.1-alpha0</Version>
   </PropertyGroup>
 
   <ItemGroup>
